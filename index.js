@@ -104,6 +104,7 @@ resumableUpload.prototype.startUpload = function() {
           }
         }
         else{
+          debug("Status Code: " + res.statusCode + " Error: " + err + " Body: " + body)
           return reject({status:"Failed", message: "Failed to start upload. Exhausted retry attempts. Status Code: " + res.statusCode + " Error: " + err});
         }
       }
